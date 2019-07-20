@@ -1,5 +1,2 @@
 Trinh Anh Duc
-<<<<<<< HEAD
 15/10/1998
-=======
->>>>>>> parent of cb29e88... adding birthday
