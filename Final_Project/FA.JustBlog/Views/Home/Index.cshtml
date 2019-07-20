@@ -1,0 +1,26 @@
+﻿@using FA.JustBlog.Core.Models
+@model List<Post>
+@{
+    ViewBag.Title = "Home Page";
+}
+@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+{
+    @Html.TextBox("searchString")<input type="submit" value="Search"/>
+}
+
+
+<table class="table-bordered">
+    <thead>
+    </thead>
+    <tbody style="width : 70%">
+        @foreach (var item in Model)
+        {
+            <div class="post-title"><h2>@Html.ActionLink(item.Title, "DetailPost", "Post",new { id = item.Id }, null)</h2></div>
+
+            <div class="posted-time">Posted @item.PostedOn</div>
+
+            <div class="post">@item.Description</div>
+            <br />
+        }
+    </tbody>
+</table>

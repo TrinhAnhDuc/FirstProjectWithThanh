@@ -1,0 +1,15 @@
+﻿@using FA.JustBlog.Core.Models;
+@model IEnumerable<Post>
+<table class="table-bordered">
+    <thead>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <div class="post-title"><h5>@Html.ActionLink(item.Title, "DetailPost", new { id = item.Id })</h5></div>
+            <div class="posted-time">Posted @item.PostedOn</div>
+            <br />
+        }
+    </tbody>
+</table>
+
